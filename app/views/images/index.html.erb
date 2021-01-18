@@ -1,0 +1,12 @@
+<h1>Images</h1>
+
+<ul>
+  <% Image.all.each do |i| %>
+      <%= image_tag i.image.attachment.variant(resize_to_limit: [100, 100]).processed%> 
+      <br>
+      <%= i.title %>
+      <br>
+  <% end %>
+</ul>
+
+<%= button_to "New Image", images_new_path, :method => :get %>

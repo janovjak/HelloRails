@@ -1,0 +1,8 @@
+<br>
+<br>
+<%= form_for @image do |f| %>
+  Title: <%= f.text_field :title %><br />
+  Keywords: <%= f.text_field :keywords %><br />
+  Image: <%= f.file_field :image %><br />
+  <%= f.submit "Upload Image" %>
+<% end %>
